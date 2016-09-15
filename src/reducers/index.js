@@ -5,13 +5,11 @@
  * @version $Id$
  */
 import {combineReducers} from 'redux'
-import counterReducer from './counterReducer'
-import todosReducer from './todosReducer'
+import counter from './counter'
 
-const rootReducer=combineReducers({
-	counter:counterReducer,
-	todos:todosReducer
-})
+const rootReducer=combineReducers({counter})
+
+export default rootReducer
 
 
 

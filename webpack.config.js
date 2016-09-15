@@ -10,9 +10,7 @@ var HtmlwebpackPlugin=require('html-webpack-plugin');
 
 module.exports={
 	entry:{
-		todo:'./src/client.js',
-		react:'react',
-		ReactDOM:'react-dom'
+		todo:'./src/client.js'
 	},
 	output:{
 		filename:'[name].js',
@@ -23,10 +21,11 @@ module.exports={
 			title:"react+redux",
 			filename:"react_redux.html",
 			template:"./src/index-tem.html",
-			chunks:['react','react-dom','todo']
+			chunks:['todo']
 		})
 		// new webpack.optimize.CommonsChunkPlugin('vendor','vendor.bundle.js')
 	],
+	devtool:"eval-source-map",
 	module:{
 		loaders:[
 			{

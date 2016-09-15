@@ -6,9 +6,17 @@
  */
 import React from 'react'
 import ReactDOM from 'react-dom'
-import HelloMessage from './components/components.jsx'
+import {Provider} from 'react-redux'
+import App from './containers/App'
+import configureStore from './store/configStore'
 
-ReactDOM.render(<HelloMessage name='messi'/>,document.getElementById('react-root'));
+var store=configureStore();
+
+
+
+ReactDOM.render(<Provider store={store}>
+	<App/>
+	</Provider>,document.getElementById('react-root'));
 
 
 
